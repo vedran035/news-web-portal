@@ -1,0 +1,13 @@
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Fudbalske Vijesti</h1> <p class="hero-description">Najnovije informacije iz svijeta fudbala! Pratite rezultate, transfere, i ključne trenutke sa terena. <br>Budite dio fudbalske strasti i saznajte sve na vrijeme!</p>
+  </div>
+</section>
+<div class="news-container">
+  <div *ngFor="let fudbal of fudbalList" class="news-card">
+    <h2>{{ fudbal.naslov }}</h2>
+    <img [src]="fudbal.url" alt="{{ fudbal.naslov }}" />
+    <p>{{  fudbal.text }}</p>
+
+  </div>
+</div>

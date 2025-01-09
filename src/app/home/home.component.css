@@ -1,0 +1,209 @@
+/* Hero sekcija (ako je potrebno) */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../../assets/slike/pozadina.jpg') no-repeat center center/cover;
+  color: white;
+  height: 95vh;
+}
+
+.hero h1,
+.hero p {
+  margin-left: 30px;
+  max-width: 60%;
+}
+
+.hero h1 {
+  font-size: 6rem;
+  margin-bottom: 20px;
+  line-height: 6rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  max-width: 50%;
+}
+
+/* Popularni sportovi sa sliderom */
+.popular-sports {
+  background-color: var(--background-color);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.popular-sports h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.sports-list {
+  display: flex;
+  transition: transform 0.5s ease;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.sport-item {
+  background-color: var(--light-gray);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 450px;
+  margin-right: 40px;
+  text-align: center;
+  padding: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sport-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.sport-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.sport-item h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.sport-item p {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+/* Dugmadi za slider (modernizovane strelice) */
+button {
+  position: absolute;
+  top: 50%;
+  color: gray;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+/* Responsivnost - manje širine kartica na manjim ekranima */
+@media (max-width: 768px) {
+  .sports-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sport-item {
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+}
+
+/* Sekcija Zašto su naše vijesti najbolje */
+.why-best {
+  background-color: var(--background-color);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.why-best h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.why-best p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.why-best ul {
+  list-style: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.why-best ul li {
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.why-best ul li::before {
+  content: "✅";
+  margin-right: 10px;
+}
+
+/* Kalendar sekcija */
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  background-color: var(--background-color);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.kalendar h2 {
+  font-size: 2.5rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+mat-calendar {
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: var(--primary-color);
+  background-color: var(--light-gray);
+}

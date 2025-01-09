@@ -1,0 +1,32 @@
+<div class="login-container">
+  <h2 class="login-title">Login</h2>
+  <div class="login-box">
+    <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          formControlName="email"
+          autocomplete="off"
+          class="form-control"
+          placeholder="Email Address"
+        />
+      </div>
+      <div class="form-group">
+        <label for="Password">Password</label>
+        <input
+          type="password"
+          name="Password"
+          formControlName="password"
+          autocomplete="off"
+          class="form-control"
+          placeholder="Password"
+        />
+      </div>
+      <button type="submit" class="btn-primary" [disabled]="!angForm.valid">
+        Login
+      </button>
+    </form>
+  </div>
+</div>

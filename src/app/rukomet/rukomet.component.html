@@ -1,0 +1,13 @@
+<section class="hero">
+  <h1 class="hero-title">Rukometne Vijesti</h1>
+  <p class="hero-description">Najvažnije vijesti iz rukometa! Pratite mečeve, tabele i uspjehe najboljih ekipa i igrača. <br>Ostanite informisani o svemu što se dešava na rukometnim terenima!</p>
+</section>
+
+<div class="news-container">
+  <div *ngFor="let rukomet of rukometList" class="news-card">
+    <h2>{{ rukomet.naslov }}</h2>
+    <img [src]="rukomet.url" alt="{{ rukomet.naslov }}" />
+    <p>{{  rukomet.text }}</p>
+
+  </div>
+</div>

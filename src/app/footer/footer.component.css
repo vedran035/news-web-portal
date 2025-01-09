@@ -1,0 +1,114 @@
+/* Footer Styling */
+.footer {
+  background-color: #00bcd4; /* Svijetloplava boja */
+  color: white;
+  padding: 20px 0;
+  font-family: 'Arial', sans-serif;
+  text-align: center; /* Centriranje teksta u footeru */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Dozvoljava prelamanje na manjim ekranima */
+  text-align: center;
+}
+
+.footer-logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+/* Popravka za middle-links */
+.middle-links {
+  list-style: none;
+  display: flex;  /* Koristimo flex umesto inline-flex */
+  justify-content: center;  /* Centriranje linkova */
+  gap: 20px;  /* Razmak između linkova */
+  padding: 0;
+  margin: 10px 0;
+}
+
+.sredina .navbar-nav {
+  display: flex;  /* Postavljamo flex za navbar-nav */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: center; /* Centriranje linkova */
+}
+
+.sredina .nav-item {
+  margin-right: 10rem; /* Razmak između linkova */
+}
+
+.sredina .nav-link {
+  text-decoration: none;
+  color: #000; /* Boja teksta */
+}
+
+.sredina .nav-link.active {
+  font-weight: bold; /* Stil za aktivni link */
+}
+
+.middle-links .nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.middle-links .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #e0f7fa; /* Svijetlija plava za hover */
+}
+
+/* Footer Social Icons Styling */
+.footer-socials {
+  display: flex;
+  justify-content: center;  /* Centriranje ikona */
+  gap: 15px;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Copyright Section */
+.footer-copyright {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 10px;
+  color: #e0f7fa;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+.sredina .nav-item {
+  margin-right: 0rem; /* Razmak između linkova */
+}
+  .footer-container {
+    flex-direction: column; /* Na manjim ekranima, raspored postaje vertikalan */
+  }
+
+  .middle-links {
+    justify-content: center;
+    gap: 10px;
+  }
+}

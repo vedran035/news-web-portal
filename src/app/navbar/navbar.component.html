@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" routerLink="home" routerLinkActive="active">Sportske Vijesti</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarsExample09"
+    aria-controls="navbarsExample09"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample09">
+    <div class="middle-wrapper">
+      <ul class="navbar-nav middle-links">
+        <li class="nav-item" *ngIf="logoutbtn">
+          <a class="nav-link" routerLink="home" routerLinkActive="active">Naslovna</a>
+        </li>
+        <li class="nav-item" *ngIf="logoutbtn">
+          <a class="nav-link" routerLink="dashboard" routerLinkActive="active">Vijesti</a>
+        </li>
+        <li class="nav-item" *ngIf="logoutbtn">
+          <a class="nav-link" routerLink="fudbal" routerLinkActive="active">Fudbal</a>
+        </li>
+        <li class="nav-item" *ngIf="logoutbtn">
+          <a class="nav-link" routerLink="kosarka" routerLinkActive="active">Košarka</a>
+        </li>
+        <li class="nav-item" *ngIf="logoutbtn">
+          <a class="nav-link" routerLink="rukomet" routerLinkActive="active">Rukomet</a>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item" *ngIf="loginbtn">
+        <a class="nav-link" routerLink="login" routerLinkActive="active">Login</a>
+      </li>
+      <li class="nav-item" *ngIf="loginbtn">
+        <a class="nav-link" routerLink="register" routerLinkActive="active">Register</a>
+      </li>
+      <li class="nav-item" *ngIf="logoutbtn">
+        <button type="button" class="btn btn-danger btn-sm" (click)="logout()">Logout</button>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,125 @@
+/* Globalni stil */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #1c92d2, #f2fcfe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+/* Kontejner za login */
+.login-container {
+  display: flex;
+  flex-direction: column; /* Ovaj red je dodat kako bi se stavio naslov iznad forme */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin-top: -70px;
+}
+
+/* Login box */
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 50px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Naslov */
+.login-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1c92d2;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+}
+
+/* Forma */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #1c92d2;
+  box-shadow: 0 0 5px rgba(28, 146, 210, 0.5);
+}
+
+/* Dugme */
+.btn-primary {
+  width: 100%;
+  background: linear-gradient(135deg, #1c92d2, #39b3ff);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(28, 146, 210, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #39b3ff, #1c92d2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(28, 146, 210, 0.5);
+}
+
+.btn-primary:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Animacija za fade-in efekat */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responzivni dizajn */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 15px;
+  }
+
+  .login-title {
+    font-size: 1.8rem;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+  }
+}

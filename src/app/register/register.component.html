@@ -1,0 +1,54 @@
+<div class="login-container">
+  <h2 class="login-title">Registration</h2>
+  <div class="login-box">
+    <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          formControlName="name"
+          autocomplete="off"
+          class="form-control"
+          placeholder="User Name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          formControlName="email"
+          autocomplete="off"
+          class="form-control"
+          placeholder="Email Address"
+        />
+        <!-- Poruka koja se prikazuje ako email nije validan -->
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+          <small *ngIf="email.errors?.required">Email je obavezan.</small><br>
+          <small *ngIf="email.errors?.email">Unesite validnu email adresu.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="Password">Password</label>
+        <input
+          type="password"
+          name="Password"
+          formControlName="password"
+          autocomplete="off"
+          class="form-control"
+          placeholder="Password"
+        />
+        <!-- Poruka koja se prikazuje ako šifra nije validna -->
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-message">
+          <small *ngIf="password.errors?.minlength">Šifra mora sadržavati najmanje 8 karaktera.</small><br>
+          <small *ngIf="password.errors?.passwordComplexity">Šifra mora sadržavati najmanje jedno veliko slovo, jedno malo slovo  i jedan broj.</small>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-primary" [disabled]="!angForm.valid">Register</button>
+    </form>
+  </div>
+</div>

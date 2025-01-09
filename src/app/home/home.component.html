@@ -1,0 +1,49 @@
+<main>
+  <!-- Hero Sekcija -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Najnovije vijesti u svijetu sporta! </h1>
+      <p>Pratite najnovije informacije o svim sportovima, igračima i događanjima širom svijeta!</p>
+    </div>
+  </section>
+
+  <!-- Popularni Sportovi -->
+  <section class="popular-sports">
+    <h2>Popularni Sportovi</h2>
+    <div class="slider-container">
+      <div class="sports-list">
+        <div *ngFor="let sport of visibleSports" class="sport-item">
+          <img [src]="sport.image" [alt]="sport.name">
+          <h3>{{ sport.name }}</h3>
+          <p>{{ sport.description }}</p>
+        </div>
+      </div>
+      <button class="prev" (click)="prevSlide()">&#10094;</button>
+      <button class="next" (click)="nextSlide()">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Zašto su naše vijesti najbolje? -->
+  <section class="why-best">
+    <h2>Zašto su naše sportske vijesti najbolje?</h2>
+    <p>Naša misija je pružiti vam najnovije, najtačnije i najuzbudljivije vijesti iz svijeta sporta. <br>Naši izvori su provjereni i uvijek ažurirani.</p>
+    <ul>
+      <li>Brze i tačne vijesti</li>
+      <li>Ekskluzivni intervjui i analize</li>
+      <li>Detalji o svim sportskim događajima</li>
+      <li>Pristup najnovijim statistikama i rezultatima</li>
+      <li>Najnovije vijesti o sportskim zvijezdama</li>
+    </ul>
+  </section>
+<section class="kalendar">
+  <h2>Kalendar</h2>
+  <div class="calendar-container">
+  <mat-calendar [(selected)]="selectedDate"></mat-calendar>
+  </div>
+</section>
+
+
+
+
+
+</main>

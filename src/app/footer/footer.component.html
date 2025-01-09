@@ -1,0 +1,38 @@
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <a routerLink="home">Sportske Vijesti &copy;</a>
+    </div>
+    <div class="sredina">
+    <ul class="navbar-nav middle-links">
+
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="logoutbtn" routerLink="dashboard" routerLinkActive="active">Vijesti</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="logoutbtn" routerLink="fudbal" routerLinkActive="active">Fudbal</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="logoutbtn" routerLink="kosarka" routerLinkActive="active">Košarka</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="logoutbtn" routerLink="rukomet" routerLinkActive="active">Rukomet</a>
+      </li>
+    </ul>
+    </div>
+    <div class="footer-socials">
+      <a href="https://facebook.com" class="social-icon" target="_blank" aria-label="Facebook">
+        <img src="https://cdn.pixabay.com/photo/2021/06/15/12/51/facebook-6338507_1280.png" alt="Facebook">
+      </a>
+      <a href="https://instagram.com" class="social-icon" target="_blank" aria-label="Instagram">
+        <img src="https://cdn.pixabay.com/photo/2021/06/15/12/14/instagram-6338393_1280.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <p>&copy; 2025 Sportske novosti. Sva prava zadržana.</p>
+  </div>
+</footer>

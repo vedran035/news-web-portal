@@ -1,0 +1,13 @@
+<section class="hero">
+  <h1 class="hero-title">Košarkaške Vijesti</h1>
+  <p class="hero-description">Sve aktuelnosti iz svijeta košarke! Rezultati, igrači, i uzbudljive utakmice – pratite kako se oblikuje svijet igre pod obručima. <br>Ne propustite nijedan košarkaški trenutak!</p>
+</section>
+
+<div class="news-container">
+  <div *ngFor="let kosarka of kosarkaList" class="news-card">
+    <h2>{{ kosarka.naslov }}</h2>
+    <img [src]="kosarka.url" alt="{{ kosarka.naslov }}" />
+    <p>{{  kosarka.text }}</p>
+
+  </div>
+</div>

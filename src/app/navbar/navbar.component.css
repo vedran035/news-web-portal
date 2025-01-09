@@ -1,0 +1,150 @@
+/* Generalni stilovi za navbar */
+.navbar {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  border: none;
+  position: relative;
+  z-index: 1000;
+
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #ffcc00;
+}
+
+/* Centriranje Dashboard i Home linkova na sredinu stranice */
+.middle-wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.middle-links .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  position: relative;
+  transition: color 0.3s ease;
+  display: flex;
+}
+
+.middle-links .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #ffcc00;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.middle-links .nav-link:hover {
+  color: #ffcc00;
+}
+
+.middle-links .nav-link:hover::after {
+  width: 100%; /* Crtica se širi preko cijelog linka */
+}
+
+/* Login i Register linkovi */
+.navbar-nav.ms-auto .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav.ms-auto .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #ffcc00;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav.ms-auto .nav-link:hover {
+  color: #ffcc00;
+}
+
+.navbar-nav.ms-auto .nav-link:hover::after {
+  width: 100%; /* Crtica se širi preko cijelog linka */
+}
+
+/* Hamburger meni */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280,0,0,0.7%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.collapse {
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .middle-wrapper {
+    position: static;
+    transform: none;
+    margin: auto;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .middle-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .navbar-nav.ms-auto {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .collapse {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    padding: 1rem;
+  }
+}

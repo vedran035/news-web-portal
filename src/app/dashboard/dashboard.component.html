@@ -1,0 +1,20 @@
+<div class="dashboard">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Aktuelne Vijesti</h1>
+      <p class="hero-description">Najnovije vijesti i događaji iz svijeta sporta. Pratite sport i budite u toku sa svim najvažnijim informacijama!</p>
+    </div>
+  </section>
+  <main>
+    <div class="news-container">
+      <div *ngFor="let product of productList" class="news-card">
+        <h2>{{ product.naslov }}</h2>
+        <img [src]="product.url" alt="{{ product.naslov }}" />
+        <p>{{ product.text }}</p>
+
+      </div>
+    </div>
+  </main>
+
+

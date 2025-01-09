@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Globalne varijable za boje i fontove */
+:root {
+  --primary-color: #4DA6FF;;
+  --secondary-color: #F44336;
+  --background-color: #F9F9F9;
+  --text-color: #333;
+  --light-gray: #F0F0F0;
+  --font-family: 'Arial', sans-serif;
+}
+
+/* Globalni stilovi za centriranje sadržaja */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Osnovni stil za tijelo */
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
